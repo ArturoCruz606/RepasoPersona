@@ -18,8 +18,9 @@ namespace RepasoPersona.Core
             Cuentas = new List<Cuenta>();
         }
         public double SumaCuentas => Cuentas.Sum(x => x.Saldo);
-        public void AgregarCuenta(int cbu) => Cuentas.Add(new Cuenta{
-            CBU = cbu
+        public void AgregarCuenta(int cbu, double saldo) => Cuentas.Add(new Cuenta{
+            CBU = cbu,
+            Saldo = saldo
         });
     }
 }

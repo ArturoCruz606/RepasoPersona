@@ -53,5 +53,16 @@ namespace RepasoPersona.Test
             var ex = Assert.Throws<InvalidOperationException>(() => Pepito.Debitar(1000));
             Assert.Equal("El monto supera al efectivo.", ex.Message);
         }
+        [Fact]
+        public double VerSaldoYCuenta(){
+            int cbu = 100;
+            double monto = 200;
+            int cbu2 = 101;
+            Pepito.Saldo = monto;
+            Pepito.AgregarCuenta(cbu, monto);
+            Pepito.AgregarCuenta(cbu2, monto);
+            
+            return Pepito.Saldo;
+        }
     }
 }
