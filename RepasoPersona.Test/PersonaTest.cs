@@ -51,7 +51,7 @@ namespace RepasoPersona.Test
         public void DebitarInsuficiente()
         {
             var ex = Assert.Throws<InvalidOperationException>(() => Pepito.Debitar(1000));
-            Assert.Equal("El monto supera al efectivo.", ex.Message);
+            Assert.Equal("El monto supera al saldo.", ex.Message);
         }
         [Fact]
         public double VerSaldoYCuenta(){

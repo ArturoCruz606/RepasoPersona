@@ -50,7 +50,7 @@ namespace RepasoPersona.Test
         public void DebitarInsuficiente()
         {
             var ex = Assert.Throws<InvalidOperationException>(() => Paypal.Debitar(1000));
-            Assert.Equal("El monto supera al saldo de la cuenta.", ex.Message);
+            Assert.Equal("El monto supera al saldo.", ex.Message);
         }
     }
 }

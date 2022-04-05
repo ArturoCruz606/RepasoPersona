@@ -14,7 +14,7 @@ namespace RepasoPersona.Core
                 throw new ArgumentException("El monto tiene que ser mayor a cero.");
 
             if (monto > Saldo)
-                throw new InvalidOperationException("El monto supera al efectivo.");
+                throw new InvalidOperationException("El monto supera al saldo.");
             Saldo -= monto;
         }
         public void Acreditar(double monto){
